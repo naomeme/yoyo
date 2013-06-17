@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="box">
 <p>
   <strong>Subject:</strong>
   <%= @topic.subject %>
@@ -18,3 +18,4 @@
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Delete', @topic, method: :delete, data: { confirm: 'Are you sure?'} %> |
 <%= link_to 'Back', topics_path %>
+</div>
