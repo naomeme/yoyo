@@ -12,6 +12,7 @@ group :development, :test do
   gem 'capybara',           github: 'jnicklas/capybara'
   gem 'factory_girl_rails', github: 'thoughtbot/factory_girl_rails'
   gem 'launchy'
+  gem 'fuubar'
 end
 
 group :production do

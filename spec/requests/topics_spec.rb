@@ -8,7 +8,7 @@ describe "Topics" do
   describe '新しいトピック投稿' do
     before { visit root_path  }
 
-    context '正しい値を入力' do
+    context 'when valid' do
       before do
         fill_in 'topic_subject', with: 'Example Subject'
         fill_in 'topic_name',    with: 'Example Name'
@@ -23,6 +23,53 @@ describe "Topics" do
           Topic, :count
         ).by(1)
       end
+    end
+  end
+
+  describe 'トピック一覧' do
+    let!(:topic) { create :topic }
+    before { visit root_path }
+
+    it { should have_content topic.subject }
+  end
+
+  describe '個別トピックページ' do
+    let(:topic) { create :topic }
+    before { visit topic_path topic }
+
+    it { should have_content topic.subject }
+    it { should have_link 'Edit', href: edit_topic_path(topic) }
+    it { should have_link 'Delete' }
+    it { should have_link 'Back', href: root_path }
+  end
+
+  describe 'トピック編集' do
+    let(:topic) { create :topic }
+    before { visit edit_topic_path topic }
+
+    context 'when valid' do
+      before do
+        fill_in 'topic_subject', with: 'New Subject'
+        fill_in 'topic_name',    with: 'New Name'
+        fill_in 'topic_body',    with: 'New Body'
+        click_button 'Update Topic'
+      end
+
+      it { should have_content 'New Subject' }
+      it { should have_content 'New Name' }
+      it { should have_content 'New Body' }
+      specify { expect(topic.reload.subject).to eq 'New Subject' }
+      specify { expect(topic.reload.name).to eq    'New Name' }
+      specify { expect(topic.reload.body).to eq    'New Body' }
+    end
+  end
+
+  describe 'トピック削除' do
+    let(:topic) { create :topic }
+    before { visit topic_path topic }
+
+    it 'Delete をクリックしたら削除される' do
+      expect { click_link 'Delete' }.to change(Topic, :count).by(-1)
     end
   end
 
