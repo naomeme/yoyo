@@ -4,6 +4,7 @@ class TopicsController < ApplicationController
   # GET /topics
   def index
     @topics = Topic.all
+    @topic = Topic.new
   end
 
   # GET /topics/1
@@ -42,7 +43,7 @@ class TopicsController < ApplicationController
   # DELETE /topics/1
   def destroy
     @topic.destroy
-    redirect_to topics_url, notice: 'Topic was successfully destroyed.'
+    redirect_to topics_url, notice: 'Topic was successfully deleted.'
   end
 
   private
