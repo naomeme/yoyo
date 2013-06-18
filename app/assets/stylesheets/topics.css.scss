@@ -11,10 +11,11 @@ body {
 .box {
 	width: 100%;
 	margin: 0 auto;
-	background: #fff;
-	border-radius: 3px;
+/*	background: #fff;
+*/	border-radius: 3px;
 	padding: 10px;
 	color: #000;
+	background: image-url('paaa.gif') 0 0 repeat;
 }
 input,textarea {
 	border-radius: 3px;
