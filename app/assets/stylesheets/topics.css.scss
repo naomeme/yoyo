@@ -22,10 +22,25 @@ input,textarea {
 	border: 0;
 	padding: 10px;
 	background: #ff69b4;
+	color: #fff;
 }
+.btn {
+	background-color: #fff;
+	border: solid 1px #000;
+	border-radius: 6px;
+	cursor: pointer;
+	color: #000;
+	&:hover {
+		background-color: #000;
+		border: #fff solid 1px;
+		color: #fff;
+	}
+}
+
 .fofo {
 	margin: 0 auto 50px;
 }
 #notice {
 	font-size: 50px;
+	color: #ff69b4;
 }

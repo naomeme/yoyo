@@ -4,7 +4,7 @@
 	<div class="box">
 <dl>
   <% @topics.each do |topic| %>
-    <dt><strong><%= link_to topic.subject, topic %></strong> ♡ <%= topic.name %> (<%= topic.created_at.to_s(:db) %>)</dt>
+    <dt><strong><%= link_to topic.subject, topic %></strong> ///// <%= topic.name %> (<%= topic.created_at.to_s(:db) %>)</dt>
     <dd><%= simple_format topic.body %></dd>
   <% end %>
 </dl>

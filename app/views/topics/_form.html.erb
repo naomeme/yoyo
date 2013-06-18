@@ -13,18 +13,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_field :subject,:size => "50" %>
-    <%= f.label :subject %>
+    <%= f.text_field :subject, :value => "subject", :class => "nodes", :size => "50" %>
+  　<!-- <%= f.label :subject %> -->
   </div>
   <div class="field">
-    <%= f.text_field :name,:size => "50" %>
-    <%= f.label :name %>
+    <%= f.text_field :name,:value => "name",:class => "nodes", :size => "50" %>
+    <!-- <%= f.label :name %> -->
   </div>
   <div class="field">
     <%= f.text_area :body,:size => "50x10" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "btn" %>
   </div>
 <% end %>
 </div>
