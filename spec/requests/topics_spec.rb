@@ -81,6 +81,28 @@ describe "Topics" do
     it { should have_content topic.subject }
   end
 
+  describe 'paginate' do
+    context 'topic が6件ある場合' do
+      before do
+        6.times { create :topic }
+        visit root_path
+      end
+
+      it { Topic.count.should eq 6 }
+      it { should have_content 'Next' }
+    end
+
+    context 'topic が5件ある場合' do
+      before do
+        5.times { create :topic }
+        visit root_path
+      end
+
+      it { Topic.count.should eq 5 }
+      it { should have_no_content 'Next' }
+    end
+  end
+
   describe '個別トピックページ' do
     let(:topic) { create :topic }
     before { visit topic_path topic }
