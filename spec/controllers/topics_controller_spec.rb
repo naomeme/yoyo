@@ -23,7 +23,7 @@ describe TopicsController do
   # This should return the minimal set of attributes required to create a valid
   # Topic. As you add validations to Topic, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "subject" => "MyString" } }
+  let(:valid_attributes) { { "subject" => "MyString", "name" => "MyName", "body" => "MyBody\nMyBody2" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
