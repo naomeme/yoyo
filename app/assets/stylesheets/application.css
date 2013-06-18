@@ -11,3 +11,13 @@
  *= require_self
  *= require_tree .
  */
+
+h1 {
+	margin: 50px auto 30px;
+	width: 400px;
+	color: #fff;
+}
+.wrapper {
+	width: 400px;
+	margin: 20px auto 50px;
+}

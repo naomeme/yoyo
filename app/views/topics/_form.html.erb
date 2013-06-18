@@ -1,3 +1,4 @@
+<div class="fofo">
 <%= form_for(@topic) do |f| %>
   <% if @topic.errors.any? %>
     <div id="error_explanation">
@@ -12,18 +13,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :subject %><br>
-    <%= f.text_field :subject %>
+    <%= f.text_field :subject, :value => "subject", :class => "nodes", :size => "50" %>
+  　<!-- <%= f.label :subject %> -->
   </div>
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name,:value => "name",:class => "nodes", :size => "50" %>
+    <!-- <%= f.label :name %> -->
   </div>
   <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.text_area :body,:size => "50x10" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "btn" %>
   </div>
 <% end %>
+</div>

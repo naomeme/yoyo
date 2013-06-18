@@ -1,3 +1,46 @@
 // Place all the styles related to the topics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	background-image: image-url('mustachify_sushi.jpg');
+	background-size: 8%;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+.box {
+	width: 100%;
+	margin: 0 auto;
+/*	background: #fff;
+*/	border-radius: 3px;
+	padding: 10px;
+	color: #000;
+	background: image-url('paaa.gif') 0 0 repeat;
+}
+input,textarea {
+	border-radius: 3px;
+	border: 0;
+	padding: 10px;
+	background: #ff69b4;
+	color: #fff;
+}
+.btn {
+	background-color: #fff;
+	border: solid 1px #000;
+	border-radius: 6px;
+	cursor: pointer;
+	color: #000;
+	&:hover {
+		background-color: #000;
+		border: #fff solid 1px;
+		color: #fff;
+	}
+}
+
+.fofo {
+	margin: 0 auto 50px;
+}
+#notice {
+	font-size: 50px;
+	color: #ff69b4;
+}
