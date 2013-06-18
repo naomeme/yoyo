@@ -19,9 +19,57 @@ describe "Topics" do
         expect {
           click_button 'Create Topic'
           should have_content 'Topic was successfully created.'
-        }.to change(
-          Topic, :count
-        ).by(1)
+        }.to change(Topic, :count).by(1)
+      end
+
+      context 'when invalid' do
+        context 'subject が入力されていないとき' do
+          before do
+            fill_in 'topic_subject', with: ''
+            fill_in 'topic_name',    with: 'Example Name'
+            fill_in 'topic_body',    with: 'Example Body'
+          end
+
+          it 'error が表示される' do
+            expect {
+              click_button 'Create Topic'
+              should have_content 'error'
+              should have_content "Subject can't be blank"
+            }.not_to change(Topic, :count)
+          end
+        end
+
+        context 'name が入力されていないとき' do
+          before do
+            fill_in 'topic_subject', with: 'Example Subject'
+            fill_in 'topic_name',    with: ''
+            fill_in 'topic_body',    with: 'Example Body'
+          end
+
+          it 'error が表示される' do
+            expect {
+              click_button 'Create Topic'
+              should have_content 'error'
+              should have_content "Name can't be blank"
+            }.not_to change(Topic, :count)
+          end
+        end
+
+        context 'body が入力されていないとき' do
+          before do
+            fill_in 'topic_subject', with: 'Example Subject'
+            fill_in 'topic_name',    with: 'Example Name'
+            fill_in 'topic_body',    with: ''
+          end
+
+          it 'error が表示される' do
+            expect {
+              click_button 'Create Topic'
+              should have_content 'error'
+              should have_content "Body can't be blank"
+            }.not_to change(Topic, :count)
+          end
+        end
       end
     end
   end
