@@ -3,7 +3,7 @@ class TopicsController < ApplicationController
 
   # GET /topics
   def index
-    @topics = Topic.all
+    @topics = Topic.order('created_at DESC').page params[:page]
     @topic = Topic.new
   end
 
