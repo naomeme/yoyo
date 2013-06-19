@@ -5,5 +5,5 @@ class Topic < ActiveRecord::Base
   validates :name, presence: true, length: { maximum: 50 }
   validates :body, presence: true
 
-  default_scope { order 'created_at DESC' }
+  paginates_per 5
 end
