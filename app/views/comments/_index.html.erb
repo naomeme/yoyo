@@ -1,0 +1,13 @@
+<h2>Comments</h2>
+
+<ul>
+  <% if @topic.comments.size < 2 %>
+    <li>No comments.</li>
+  <% else %>
+    <% @topic.comments.each do |comment| %>
+      <% unless comment.id.nil? %>
+        <li><%= comment.name %>: <%= comment.content %>(<%= comment.created_at.to_s(:db) %>)</li>
+      <% end %>
+    <% end %>
+  <% end %>
+</ul>
