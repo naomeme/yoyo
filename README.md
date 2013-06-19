@@ -1,4 +1,4 @@
-# SUSHI-WAVE
+# タイトル：SUSHI-WAVE
 
 # 研修用アプリ
 
