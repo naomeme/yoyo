@@ -9,6 +9,7 @@ class TopicsController < ApplicationController
 
   # GET /topics/1
   def show
+    @comment = @topic.comments.build
   end
 
   # GET /topics/new
