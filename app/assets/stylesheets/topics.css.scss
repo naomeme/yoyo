@@ -45,3 +45,9 @@ input,textarea {
 	font-size: 50px;
 	color: #ff69b4;
 }
+:-moz-placeholder {
+	color: #FBBAD8;
+}
+::-webkit-input-placeholder {
+	color: #FBBAD8;
+}
