@@ -11,12 +11,29 @@ p, ol, ul, td {
   font-size: 13px;
   line-height: 18px;
 }
-
+li {
+  list-style: none;
+  margin-bottom: 5px;
+}
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
 }
+h1 a:link {
+              color: #ffffff;
+              text-decoration: none;
+              background: none;
+              & :hover {
+                color: #fff;
+              }
+              & :active {
+                color: #ffffff;
+              }
+              & :visited {
+                color: #fff;
+              }
+            }
 
 a {
   color: #ff69b4;
@@ -29,6 +46,8 @@ a {
     background-color: #000;
   }
 }
+
+
 
 div {
   &.field, &.actions {
