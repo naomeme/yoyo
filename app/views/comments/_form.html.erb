@@ -10,16 +10,17 @@
       </ul>
     </div>
   <% end %>
-
+<div class="comment_form">
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <!-- <%= f.label :name %><br> -->
+    <%= f.text_field :name, :placeholder => "name", :size => "15" %>
   </div>
   <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_field :content %>
+    <!-- <%= f.label :content %><br> -->
+    <%= f.text_field :content, :placeholder => "content", :size => "40" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions ">
+    <%= f.submit :class => "btn" %>
   </div>
+</div>
 <% end %>
