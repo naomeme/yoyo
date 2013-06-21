@@ -2,46 +2,58 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-	background-image: image-url('mustachify_sushi.jpg');
-	background-size: 8%;
 	margin: 0;
 	padding: 0;
+	background-image: image-url('sushi.jpg');
+	background-size: 110%;
 	color: #fff;
 }
 .box {
-	width: 100%;
 	margin: 0 auto;
-/*	background: #fff;
-*/	border-radius: 3px;
-	padding: 20px;
 	color: #000;
-	background: image-url('paaa.gif') 0 0 repeat;
+	padding: 20px;
+	width: 100%;
+	border-radius: 0px;
+	background: image-url('paaa.gif') repeat transparent;
+	p, dt {
+		background:  image-url('paaa.gif') repeat transparent;
+	}
 }
+
 input,textarea {
-	border-radius: 3px;
-	border: 0;
 	padding: 10px;
+	border: 1px solid #fff;
+	border-radius: 6px;
 	background: #ff69b4;
 	color: #fff;
 }
 .btn {
-	background-color: #fff;
-	border: solid 1px #000;
+	border: solid 1px #fff;
 	border-radius: 6px;
-	cursor: pointer;
+	background-color: #fff;
 	color: #000;
+	cursor: pointer;
 	&:hover {
-		background-color: #000;
 		border: #fff solid 1px;
+		background-color: #000;
 		color: #fff;
 	}
 }
-
 .fofo {
 	margin: 0 auto 50px;
 	padding: 30px;
 }
+
 #notice {
-	font-size: 50px;
 	color: #ff69b4;
+	font-size: 0px;
+}
+:-moz-placeholder {
+	color: #FBBAD8;
+}
+::-webkit-input-placeholder {
+	color: #FBBAD8;
+}
+.aa {
+	margin-top: 10px;
 }
