@@ -7,7 +7,39 @@ body {
 	background-image: image-url('sushi.jpg');
 	background-size: 110%;
 	color: #fff;
+}       
+
+        @-webkit-keyframes shake {
+                50% {-webkit-transform: translate(1px, 0px);}
+            }
+h1 {
+	margin: 50px auto 30px;
+	width: 400px;
+	color: #fff;
+                -webkit-animation-name: shake;
+                -webkit-animation-duration: 0.1s;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-transition-timing-function: ease-in;
 }
+h1 a {
+  color: #fff;
+  background-color: #fff;
+  &:visited {
+    color: #fff;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+.wrapper {
+	width: 400px;
+	margin: 20px auto 50px;
+  a:link {
+    color: #ff69b4;
+  }
+}
+
 .box {
 	margin: 0 auto;
 	color: #000;
@@ -51,9 +83,9 @@ input,textarea {
 :-moz-placeholder {
 	color: #FBBAD8;
 }
-::-webkit-input-placeholder {
+:-webkit-input-placeholder {
 	color: #FBBAD8;
 }
-.aa {
+.entry {
 	margin-top: 10px;
 }
